@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import my.id.zaxx.fakeit.api.FakeApi
+import my.id.zaxx.fakeit.api.RetrofitInstance
+import my.id.zaxx.fakeit.model.Fake
 
 class MainActivity : AppCompatActivity() {
     lateinit var buttonGet :Button
@@ -17,10 +19,6 @@ class MainActivity : AppCompatActivity() {
         textGet = findViewById(R.id.get_name)
         buttonGet = findViewById(R.id.btn_get)
 
-        buttonGet.setOnClickListener {
-            var nameText = textGet
-
-        }
-
+        RetrofitInstance.getApiService().getFake().
     }
 }
